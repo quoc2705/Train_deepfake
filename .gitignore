@@ -1,0 +1,25 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Model checkpoints (large files > 40MB)
+models/*.pth
+models/*.pth.tar
+models/*.pt
+models/*.task
+
+# OS / IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

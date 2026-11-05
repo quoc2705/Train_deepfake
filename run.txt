@@ -1,0 +1,20 @@
+# =====================================================================
+# CÁC LỆNH CHẠY ỨNG DỤNG KIỂM THỬ DEEPFAKE FGI (CROP VÙNG MIỆNG v5_mouth)
+# Thư mục chạy: D:\PBL6\test_mouth
+# =====================================================================
+
+# 1. Mở giao diện Desktop GUI (import model & video trực tiếp trên màn hình):
+.\.venv\Scripts\python.exe app.py
+
+
+# 2. Chạy kiểm thử tự động toàn bộ pipeline & kiểm tra nạp checkpoint:
+.\.venv\Scripts\python.exe app.py --test
+
+
+# 3. Chạy kiểm tra nhanh 1 video bằng dòng lệnh (CLI) với model mặc định:
+.\.venv\Scripts\python.exe app.py --cli --video "duong_dan_video.mp4"
+
+
+# 4. Chạy CLI có tùy chỉnh file model, ngưỡng FAKE, chế độ crop, số đoạn 1s và số giây quét:
+.\.venv\Scripts\python.exe app.py --cli --video "duong_dan_video.mp4" --ckpt "models/model_best_epoch23.pth.tar" --threshold 0.5 --crop-mode mouth_lm --max-chunks 10 --max-seconds 12
+
